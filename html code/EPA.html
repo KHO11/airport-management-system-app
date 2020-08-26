@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>End point assessment</title>
+
+    <style>
+
+        body {
+            background-image: url(airportBackground.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%; 
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #loginForm {
+            text-align: center;
+            color:white;
+            font-family: sans-serif;
+            
+        }
+
+        input[type=text] {
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+
+        .header {
+            padding: 60px;
+            text-align: center;
+            font-family: sans-serif;
+            color: white;
+            font-size: 80px;
+
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+           
+        }
+
+        #loginButton {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <span class="text"><strong>Login </strong></span>
+    </div>
+
+    <div id="loginForm">
+        <strong>Username: </strong>
+        <br>
+        <input type="text" id ="username" name="username">
+        <br><br>
+        <strong>Password: </strong>
+        <br>
+        <input type="text" id="password" name="password"> 
+    </div>
+
+    <div id="loginButton">
+        <a class="button" id="linkButton" onclick="loginSystem();">Login</a>
+    </div>
+
+    <script>
+        function loginSystem() {
+            var username = document.getElementById("username");
+            var password = document.getElementById("password");
+
+            // collects the values that are entered in the input boxes
+            var usernameText = username.value;
+            var passwordText = password.value;
+
+            if (usernameText == "a" && passwordText=="a") {
+                // takes the user to main page
+                window.open("file:///E:/epa%20folder/html%20code/main%20form%20EPA.html");
+                
+            }
+            else {
+                alert("Incorrect details, try again");
+               
+            }
+        }
+    </script>
+</body>
+</html>

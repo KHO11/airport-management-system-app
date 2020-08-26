@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<head>
+    <title>Main Form EPA</title>
+    <script src="mainEpa.js">
+       
+    </script>
+
+    <style>
+
+        body {
+            overflow:hidden;
+        }
+
+        button {
+            position:relative;
+            bottom:100px;
+        }
+
+        
+        .aircraftSection {
+            border: 2px solid black;
+            height:800px;
+            width:500px;
+            position: relative;
+            left: 00px;
+            bottom:200px;
+            transform: scale(0.8,0.8);
+        }
+
+        .runwaySection {
+            border: 2px solid black;
+            height:800px;
+            width:500px;
+            position: relative;
+            left: 750px;
+            bottom: 1060px;
+            transform: scale(0.7,0.65);
+        }
+
+        .runway1 {
+            border : 2px solid black;
+            height:50px;
+            background:darkgrey;
+            position: relative;
+            
+        }
+
+
+        .runway2 {
+            border : 2px solid black;
+            height:50px;
+            background:darkgrey;
+            position: relative;
+            
+        }
+
+        .runway3 {
+            border : 2px solid black;
+            height:50px;
+            background:darkgrey;
+            position: relative;
+            
+        }
+
+        .runway4 {
+            border : 2px solid black;
+            height:50px;
+            background:darkgrey;
+            position: relative;
+            
+        }
+
+        .runway5 {
+            border : 2px solid black;
+            height:50px;
+            background:darkgrey;
+            position: relative;
+            
+        }
+
+
+        h1 {
+            position: relative;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: lightslategray;
+        }
+
+        #aeroplane {
+            position: relative;
+            left:250px;
+            top:200px;
+        }
+
+   
+
+
+
+        .dropbtn2 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown2 {
+            position: relative;
+            display: inline-block;
+            left:50px;
+            top:10px;
+        }
+
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content2 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content2 a:hover {background-color: #ddd;}
+
+        .dropdown2:hover .dropdown-content2 {display: block;}
+
+        .dropdown2:hover .dropbtn2 {background-color: #3e8e41;}
+
+
+
+
+
+    
+        h2 {
+            position: relative;
+            text-align: center;
+            font-family: sans-serif;
+            bottom:0px;
+        }
+
+        h3 {
+            position: relative;
+            bottom:50px;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 50px;
+        }
+
+        #airportText {
+            position:relative;
+            left:50px;
+            top:150px;
+        }
+
+        #subHeading {
+            position: relative;
+            right:150px;
+            top:10px;
+        }
+
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            position: relative;
+            bottom:250px;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgreen;
+        }
+
+        h5 {
+            position: relative;
+            bottom:250px;
+        }
+
+        #demo {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border : 1px solid black;
+            width: 340px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            position:relative;
+            bottom: 100px;
+        }
+
+        #mySelect {
+            position: relative;
+            top:280px;
+            left:100px;
+        }
+
+        #mySelect2 {
+            position: relative;
+            left:200px;
+            top:20px;
+        }
+
+        #smallInfo {
+            position: relative;
+            left:700px;
+            bottom:150px;
+        }
+
+        
+
+        
+
+
+        
+    </style>
+</head>
+
+<body onload="renderTime();">
+
+    <h3>Airport traffic management</h3>
+
+    <p id="demo">
+        
+    </p>
+
+    <p id="smallInfo">
+        There is supposed to be 7 minutes after take off or landing times. 
+    </p>
+
+
+    <div class="aircraftSection">
+
+        <h1>Aircrafts</h1>
+
+    
+<form action="/action_page.php">
+    <select id="mySelect">
+      <option value="DC35">DC35</option>
+      <option value="AB330">AB330</option>
+      <option value="LH456">LH456</option>
+      <option value="AB300">AB300</option>
+    </select>
+    
+</form>
+    
+
+    <img id="aeroplane" src="aeroplaneGroup.jpg" width="200px" height="200px">
+
+    <a id="subHeading">Choose aircraft code</a>
+
+
+
+    
+
+
+    <h5>Aircrafts Table</h5>
+
+<table>
+  <tr>
+    <th>Aircrafts</th>
+    <th>Take-Off time</th>
+    <th>Landing Time</th>
+  </tr>
+  <tr>
+    <td>DC35</td>
+    <td>16</td>
+    <td>23</td>
+  </tr>
+  <tr>
+    <td>AB330</td>
+    <td>12</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>LH456</td>
+    <td>19</td>
+    <td>21</td>
+  </tr>
+  <tr>
+    <td>AB300</td>
+    <td>22</td>
+    <td>28</td>
+  </tr>
+  
+</table>
+
+
+
+<button id="taken" onclick= "takeOff()">Take off</button>
+
+<button id="land" onclick="landing()">landing</button>
+
+
+
+    </div>
+
+
+    
+    
+    <div class="runwaySection">
+
+        
+
+        <h2>Runways</h2>
+
+        <form action="/action_page.php">
+            <select id="mySelect2">
+              <option id="firstRunway" value="1">1</option>
+              <option id="secondRunway" value="2">2</option>
+              <option id="thirdRunway" value="3">3</option>
+              <option id="fourthRunway" value="4">4</option>
+              <option id="fifthRunway" value="5">5</option>
+            </select>
+            
+        </form>
+
+        <a>Runway number</a>
+
+        
+      
+        <p>Runway 1</p>
+        <div id="r1" class="runway1" >
+            
+        </div>
+
+        <br><br>
+        <p>Runway 2</p>
+        <div id="r2" class="runway2">
+            
+        </div>
+
+        <br><br>
+        <p>Runway 3</p>
+        <div id="r3" class="runway3">
+            
+        </div>
+
+        <br><br>
+        <p>Runway 4</p>
+        <div id="r4" class="runway4">
+            
+        </div>
+
+        <br></br>
+        <p>Runway 5</p>
+        <div id="r5" class="runway5">
+            
+        </div>
+
+
+    </div>
+
+
+    
+</body>
+</html>
